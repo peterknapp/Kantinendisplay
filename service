@@ -1,0 +1,43 @@
+#!/usr/bin/python
+import time
+
+def main():
+    while 1:
+        f = open("kantinendisplay/numbers.txt", "r")
+        Counter = 0
+
+        with open('kantinendisplay/numbers.txt', 'r') as fin:
+            data = fin.read().splitlines(True)
+        with open('kantinendisplay/numbers.txt', 'w') as fout:
+            fout.writelines(data[1:])
+        time.sleep(1)
+
+# f = open("kantinendisplay/numbers.txt", "r")
+# Counter = 0
+
+# with open('kantinendisplay/numbers.txt', 'r') as fin:
+#     data = fin.read().splitlines(True)
+# with open('kantinendisplay/numbers.txt', 'w') as fout:
+#     fout.writelines(data[1:])
+    
+# Content = f.read() 
+# CoList = Content.split("\n") 
+
+# for i in CoList: 
+#     if i: 
+#         Counter += 1
+
+# print(Content)
+# print(Counter)
+    
+# while True:
+#     try:
+#         mode=int(raw_input('Wartenummer:'))
+#         if mode == 999:
+#             break
+#         print mode
+#     except ValueError:
+#         break
+
+if __name__ == "__main__":
+    main()
