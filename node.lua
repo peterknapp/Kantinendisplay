@@ -1,5 +1,5 @@
 
-gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
+gl.setup(1920, 1080)
 
 local font = resource.load_font "bold.ttf"
 
