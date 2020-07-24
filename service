@@ -4,7 +4,7 @@ import os.path
 
 def main():
     while 1:
-        if os.path.exists(file_path):
+        if os.path.exists("numbers.txt"):
             Counter = 0
             f = open("numbers.txt", "r")
             Content = f.read()
