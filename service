@@ -3,6 +3,7 @@ import time
 import os.path
 
 def main():
+    print("HALL")
     if os.path.exists("numbers.txt"):
         with open('numbers.txt', 'w') as fout:
             data.append("Guten Tag\n")
