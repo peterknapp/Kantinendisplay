@@ -12,7 +12,7 @@ def main():
             for i in CoList: 
                 if i: 
                     Counter += 1
-            if Counter > 15:
+            if Counter == 15:
                 with open('numbers.txt', 'r') as fin:
                     data = fin.read().splitlines(True)
                 with open('numbers.txt', 'w') as fout:
@@ -28,7 +28,7 @@ def main():
             with open('numbers.txt', 'w') as fout:
                 data.append("99\n")
                 fout.writelines(data)
-        time.sleep(5)
+        time.sleep(3600)
 
 
 # f = open("kantinendisplay/numbers.txt", "r")
