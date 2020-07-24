@@ -30,7 +30,7 @@ def main():
             with open('numbers.txt', 'w') as fout:
                 data.append("1\n")
                 fout.writelines(data)
-        time.sleep(5)
+        time.sleep(1)
 
 
 # f = open("kantinendisplay/numbers.txt", "r")
