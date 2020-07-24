@@ -1,16 +1,34 @@
 #!/usr/bin/python
 import time
+import os.path
 
 def main():
     while 1:
-        f = open("numbers.txt", "r")
-        Counter = 0
-
-        with open('numbers.txt', 'r') as fin:
-            data = fin.read().splitlines(True)
-        with open('numbers.txt', 'w') as fout:
-            fout.writelines(data[1:])
+        if os.path.exists(file_path):
+            Counter = 0
+            f = open("numbers.txt", "r")
+            Content = f.read()
+            CoList = Content.split("\n") 
+            for i in CoList: 
+                if i: 
+                    Counter += 1
+            if Counter > 15:
+                with open('numbers.txt', 'r') as fin:
+                    data = fin.read().splitlines(True)
+                with open('numbers.txt', 'w') as fout:
+                    data = data + "99\n"
+                    fout.writelines(data[1:])
+            else:
+                with open('numbers.txt', 'r') as fin:
+                    data = fin.read().splitlines(True)
+                with open('numbers.txt', 'w') as fout:
+                    data = data + "99\n"
+                    fout.writelines(data)
+        else:
+            with open('numbers.txt', 'w') as fout:
+                fout.writelines("99\n")
         time.sleep(5)
+
 
 # f = open("kantinendisplay/numbers.txt", "r")
 # Counter = 0
