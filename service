@@ -3,6 +3,10 @@ import time
 import os.path
 
 def main():
+    if os.path.exists("numbers.txt"):
+        with open('numbers.txt', 'w') as fout:
+            data.append("Guten Tag\n")
+            fout.writelines(data)
     while True:
         try:
             CurrentNumber=int(raw_input('Wartenummer:'))
