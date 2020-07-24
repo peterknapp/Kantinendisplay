@@ -22,11 +22,12 @@ def main():
                 with open('numbers.txt', 'r') as fin:
                     data = fin.read().splitlines(True)
                 with open('numbers.txt', 'w') as fout:
-                    data = data + "99\n"
+                    data.append("99")
                     fout.writelines(data)
         else:
             with open('numbers.txt', 'w') as fout:
-                fout.writelines("99\n")
+                data.append("99")
+                fout.writelines(data)
         time.sleep(5)
 
 
