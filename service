@@ -3,14 +3,14 @@ import time
 
 def main():
     while 1:
-        # f = open("numbers.txt", "r")
-        # Counter = 0
+        f = open("numbers.txt", "r")
+        Counter = 0
 
-        # with open('numbers.txt', 'r') as fin:
-        #     data = fin.read().splitlines(True)
-        # with open('numbers.txt', 'w') as fout:
-        #     fout.writelines(data[1:])
-        time.sleep(1)
+        with open('numbers.txt', 'r') as fin:
+            data = fin.read().splitlines(True)
+        with open('numbers.txt', 'w') as fout:
+            fout.writelines(data[1:])
+        time.sleep(5)
 
 # f = open("kantinendisplay/numbers.txt", "r")
 # Counter = 0
