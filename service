@@ -3,43 +3,37 @@ import time
 import os.path
 
 def main():
-    if os.path.exists("numbers.txt"):
-        while True:
-            try:
-                CurrentNumber=int(raw_input('Wartenummer:'))
-                if CurrentNumber == 999:
-                    break
-                if os.path.exists("numbers.txt"):
-                    Counter = 0
-                    f = open("numbers.txt", "r")
-                    Content = f.read()
-                    CoList = Content.split("\n") 
-                    for i in CoList: 
-                        if i: 
-                            Counter += 1
-                    if Counter == 15:
-                        with open('numbers.txt', 'r') as fin:
-                            data = fin.read().splitlines(True)
-                        with open('numbers.txt', 'w') as fout:
-                            data.append(str(CurrentNumber) + "\n")
-                            fout.writelines(data[1:])
-                    else:
-                        with open('numbers.txt', 'r') as fin:
-                            data = fin.read().splitlines(True)
-                        with open('numbers.txt', 'w') as fout:
-                            data.append(str(CurrentNumber) + "\n")
-                            fout.writelines(data)
-                else:
-                    with open('numbers.txt', 'w') as fout:
-                        data.append("Guten Tag\n")
-                        fout.writelines(data)
-            except ValueError:
+    while True:
+        try:
+            CurrentNumber=int(raw_input('Wartenummer:'))
+            if CurrentNumber == 999:
                 break
-    else:
-        with open('numbers.txt', 'w') as fout:
-            data.append("Guten Tag\n")
-            fout.writelines(data)
-
+            if os.path.exists("numbers.txt"):
+                Counter = 0
+                f = open("numbers.txt", "r")
+                Content = f.read()
+                CoList = Content.split("\n") 
+                for i in CoList: 
+                    if i: 
+                        Counter += 1
+                if Counter == 15:
+                    with open('numbers.txt', 'r') as fin:
+                        data = fin.read().splitlines(True)
+                    with open('numbers.txt', 'w') as fout:
+                        data.append(str(CurrentNumber) + "\n")
+                        fout.writelines(data[1:])
+                else:
+                    with open('numbers.txt', 'r') as fin:
+                        data = fin.read().splitlines(True)
+                    with open('numbers.txt', 'w') as fout:
+                        data.append(str(CurrentNumber) + "\n")
+                        fout.writelines(data)
+            else:
+                with open('numbers.txt', 'w') as fout:
+                    data.append("Guten Tag\n")
+                    fout.writelines(data)
+        except ValueError:
+            break
 
     # CurrentNumber = 0
     # while 1:
