@@ -1,6 +1,12 @@
 #!/usr/bin/python
 import time
 import os.path
+import os
+import fcntl
+
+NUM_LED  = 0x02
+all_on = NUM_LED
+fcntl.ioctl(console_fd, KDSETLED, all_on)
 
 def main():
     if not os.path.exists("numbers.txt"):
