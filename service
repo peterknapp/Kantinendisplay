@@ -10,7 +10,9 @@ def main():
     while True:
         try:
             CurrentNumber=int(raw_input('Wartenummer:'))
-            if CurrentNumber == 999:
+            if CurrentNumber == 9999:
+                with open('numbers.txt', 'w') as fout:
+                    fout.writelines("Guten Tag\n")
                 break
             if os.path.exists("numbers.txt"):
                 Counter = 0
@@ -20,7 +22,7 @@ def main():
                 for i in CoList: 
                     if i: 
                         Counter += 1
-                if Counter == 15:
+                if Counter == 10:
                     with open('numbers.txt', 'r') as fin:
                         data = fin.read().splitlines(True)
                     with open('numbers.txt', 'w') as fout:
