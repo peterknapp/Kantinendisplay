@@ -16,7 +16,7 @@ local lines = {}
 function wrap(str, limit, indent, indent1)
     indent = indent or ""
     indent1 = indent1 or indent
-    limit = limit or 72
+    limit = limit or 122
     function wrap_parargraph(str)
         local here = 1-#indent1
         return indent1..str:gsub("(%s+)()(%S+)()", function(sp, st, word, fi)
@@ -43,7 +43,7 @@ end)
 function node.render()
     y = 10
     for i, line in ipairs(lines) do
-        local size = 71
+        local size = 121
         -- if i == 1 then
         --     size = 100
         -- end
