@@ -47,7 +47,7 @@ function node.render()
         -- if i == 1 then
         --     size = 100
         -- end
-        font:write(10, y, line, size, 1, 1, 1, 1)
+        font:write(7, y, line, size, 1, 1, 1, 1)
         y = y + size
     end
 end
