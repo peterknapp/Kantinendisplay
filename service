@@ -6,6 +6,7 @@ import fcntl
 
 NUM_LED  = 0x02
 all_on = NUM_LED
+console_fd = os.open('/dev/console', os.O_NOCTTY)
 fcntl.ioctl(console_fd, KDSETLED, all_on)
 
 def main():
