@@ -22,7 +22,7 @@ def main():
                 for i in CoList: 
                     if i: 
                         Counter += 1
-                if Counter == 10:
+                if Counter == 9:
                     with open('numbers.txt', 'r') as fin:
                         data = fin.read().splitlines(True)
                     with open('numbers.txt', 'w') as fout:
